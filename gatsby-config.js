@@ -8,13 +8,14 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-source-graphql",
       options: {
-        name: "images",
-        path: "./src/images/",
+        typeName: "alldata",
+        fieldName: "alldata",
+        url: "https://api-us-east-1.graphcms.com/v2/ckvmyn62y1nnx01xnhvub13s2/master",
       },
-      __key: "images",
     },
   ],
 };
