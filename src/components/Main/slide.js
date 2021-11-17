@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-
 import { graphql, useStaticQuery } from 'gatsby'
 import * as S from "./style";
+import { Helmet } from "react-helmet";
 
 export function Slide() {
     const data = useStaticQuery(graphql`
@@ -99,151 +99,148 @@ export function Slide() {
     
     const settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
-        slidesToShow: 6,
-        slidesToScroll: 6,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2200,
+        autoplaySpeed: 10000,
         pauseOnHover: true,
         
     };
     
     return (
-        <S.SlideContainer>
-               
-                {/* <Slider {...settings}> */}
-                <S.Slide>
+  
+        <S.Container>
+               <Helmet>
+                  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+                  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+               </Helmet>
+                <Slider {...settings}>
+
+                <S.Content>
                     <S.Title>Chthonic Gods</S.Title>
-                    <S.Column>
+                    <S.Row>
                         <S.Character>
                             <S.CharacterImg src={imgMain1.url} alt="imgMain1" />
                             <S.CharacterText >{imgText1}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
                         </S.Character>
-                        
-                        <S.Character>
+                        <S.CharacterNyx>
                             <S.CharacterImg src={imgMain2.url} alt="imgMain2" />
                             <S.CharacterText >{imgText2}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-
-                        <S.Character>
+                        </S.CharacterNyx>
+                        <S.CharacterChaos>
                             <S.CharacterImg src={imgMain3.url} alt="imgMain3" />
                             <S.CharacterText >{imgText3}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-
-                        <S.Character>
+                        </S.CharacterChaos>
+                        <S.CharacterCharon>
                             <S.CharacterImg src={imgMain4.url} alt="imgMain4" />
                             <S.CharacterText >{imgText4}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-                    </S.Column>
-                </S.Slide>
+                        </S.CharacterCharon>
+                    </S.Row>
+                </S.Content>
                 
-                <S.Slide>
+                <S.Content>
                     <S.Title>Chthonic Gods</S.Title>
-                    <S.Column>
+                    <S.Row>
                         <S.Character>
                             <S.CharacterImg src={imgMain5.url} alt="imgMain1" />
                             <S.CharacterText >{imgText5}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-                        
+                        </S.Character> 
                         <S.Character>
                             <S.CharacterImg src={imgMain6.url} alt="imgMain2" />
                             <S.CharacterText >{imgText6}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
                         </S.Character>
-
-                        <S.Character>
+                        <S.CharacterTisiphone>
                             <S.CharacterImg src={imgMain7.url} alt="imgMain3" />
                             <S.CharacterText >{imgText7}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-
+                        </S.CharacterTisiphone>
                         <S.Character>
                             <S.CharacterImg src={imgMain9.url} alt="imgMain4" />
                             <S.CharacterText >{imgText9}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
                         </S.Character>
-                    </S.Column>
-                </S.Slide>
-                <S.Slide>
+                    </S.Row>
+                </S.Content>
+
+                <S.Content>
                     <S.Title>Chthonic Gods</S.Title>
-                    <S.Column>
-                        <S.Character>
+                    <S.Row>
+                        <S.CharacterThanatos>
                             <S.CharacterImg src={imgMain8.url} alt="imgMain1" />
                             <S.CharacterText >{imgText8}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
+                        </S.CharacterThanatos>
                         <S.Character>
                             <S.CharacterImg src={imgMain10.url} alt="imgMain2" />
                             <S.CharacterText >{imgText10}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
                         </S.Character>
-                    </S.Column>
-                </S.Slide>
-                <S.Slide>
+                    </S.Row>
+                </S.Content>
+
+                <S.Content>
                     <S.Title>Olympian Gods</S.Title>
-                    <S.Column>
-                        <S.Character>
-                            <S.CharacterImg src={imgMain11.url} alt="imgMain1" />
+                    <S.Row>
+                        <S.CharacterZeus>
+                            <S.CharacterImgZeus src={imgMain11.url} alt="imgMain1" />
                             <S.CharacterText >{imgText11}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-                        
-                        <S.Character>
-                            <S.CharacterImg src={imgMain12.url} alt="imgMain2" />
+                        </S.CharacterZeus>   
+                        <S.CharacterPoseidon>
+                            <S.CharacterImgPoseidon src={imgMain12.url} alt="imgMain2" />
                             <S.CharacterText >{imgText12}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-
-                        <S.Character>
+                        </S.CharacterPoseidon>
+                        <S.CharacterAthena>
                             <S.CharacterImg src={imgMain13.url} alt="imgMain3" />
                             <S.CharacterText >{imgText13}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-
-                        <S.Character>
+                        </S.CharacterAthena>
+                        <S.CharacterAphrodite>
                             <S.CharacterImg src={imgMain14.url} alt="imgMain4" />
                             <S.CharacterText >{imgText14}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-                    </S.Column>
-                </S.Slide>
-                <S.Slide>
+                        </S.CharacterAphrodite>
+                    </S.Row>
+                </S.Content>
+
+                <S.Content>
                     <S.Title>Olympian Gods</S.Title>
-                    <S.Column>
-                        <S.Character>
+                    <S.Row>
+                        <S.CharacterArtemis>
                             <S.CharacterImg src={imgMain15.url} alt="imgMain1" />
                             <S.CharacterText >{imgText15}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-                        
-                        <S.Character>
+                        </S.CharacterArtemis>
+                        <S.CharacterAres>
                             <S.CharacterImg src={imgMain16.url} alt="imgMain2" />
                             <S.CharacterText >{imgText16}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-
+                        </S.CharacterAres>
                         <S.Character>
                             <S.CharacterImg src={imgMain17.url} alt="imgMain3" />
                             <S.CharacterText >{imgText17}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
                         </S.Character>
-
-                        <S.Character>
-                            <S.CharacterImg src={imgMain18.url} alt="imgMain4" />
+                        <S.CharacterHermes>
+                            <S.CharacterImgHermes src={imgMain18.url} alt="imgMain4" />
                             <S.CharacterText >{imgText18}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
-                        </S.Character>
-                    </S.Column>
-                </S.Slide>
-                <S.Slide>
+                        </S.CharacterHermes>
+                    </S.Row>
+                </S.Content>
+
+                <S.Content>
                     <S.Title>Olympian Gods</S.Title>
-                    <S.Column>
+                    <S.Row>
                         <S.Character>
                             <S.CharacterImg src={imgMain19.url} alt="imgMain1" />
                             <S.CharacterText >{imgText19}</S.CharacterText >
@@ -255,9 +252,11 @@ export function Slide() {
                             <S.CharacterText >{imgText20}</S.CharacterText >
                             <S.Btn>{buttonMain}</S.Btn>
                         </S.Character>
-                    </S.Column>
-                </S.Slide>
-            {/* </Slider> */}
-        </S.SlideContainer>
+                    </S.Row>
+                </S.Content>
+
+            </Slider>
+
+        </S.Container>
     );
 }

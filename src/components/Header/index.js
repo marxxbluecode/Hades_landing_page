@@ -45,11 +45,11 @@ export function Header() {
       <S.HeaderNav>
         <S.HeaderLogo src={logo.url} alt="logo" />
         <S.ul>
-          <li><S.a href="#">{home}</S.a></li>
-          <li><S.a href="#">{aboutUs}</S.a></li>
-          <li><S.a href="#">{ourservices}</S.a></li>
-          <li><S.a href="#">{reservation}</S.a></li>
-          <li><S.a href="#">{contactus}</S.a></li>
+          <S.li><S.a href="#">{home}</S.a></S.li>
+          <S.li><S.a href="#">{aboutUs}</S.a></S.li>
+          <S.li><S.a href="#">{ourservices}</S.a></S.li>
+          <S.li><S.a href="#">{reservation}</S.a></S.li>
+          <S.li><S.a href="#">{contactus}</S.a></S.li>
         </S.ul>
       </S.HeaderNav>
     <S.HeaderBottom>

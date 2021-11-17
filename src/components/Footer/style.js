@@ -12,21 +12,21 @@ export const TopContainer = styled.div`
     flex-direction: row;
     width: 100%;
     height: 30vh;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: #3c4049;
-    padding: 0vw 10vw 17vw 10vw;
+    padding: 0vw 12vw 12vw 12vw;
 
 `
 export const LogoFooter = styled.img`
-    width: 12vw;
-    height: 8vw;
+    width: 10vw;
+    height: 6vw;
     margin-top: 4vw;
 `
 export const Title = styled.div`
-    font-size: 1.4vw;
+    font-size: 1vw;
     color: #d2d2d2;
     font-weight: bold;
-    padding-bottom: 1.5vw;
+    padding-bottom: 1vw;
    
 `
 export const Paragraph = styled.div`
@@ -36,6 +36,7 @@ export const Paragraph = styled.div`
     padding: .1vw;
     opacity: 0.8;
     cursor: pointer;
+    font-size: 0.8vw;
 `
 export const Paragraphs = styled.div`
     width: 100%;
@@ -44,6 +45,7 @@ export const Paragraphs = styled.div`
     padding: .1vw;
     opacity: 0.8;
     cursor: pointer;
+    font-size: 0.9vw;
 `
 export const BottomContainer = styled.div`
     display: flex;

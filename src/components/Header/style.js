@@ -26,9 +26,24 @@ export const a = styled.a`
     font-size: 1vw;
     color: #d2d2d2;
     cursor: pointer;
+    z-index: 99;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(to right, #e10101, #e10101 50%, #fff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
     &:hover {
-        transform: scale(1.1);
+        background-position: 0 100%;
     }
+    
+`
+export const li = styled.li`
+    cursor: pointer;
 `
 export const ul = styled.ul`
     display: flex;
@@ -36,6 +51,7 @@ export const ul = styled.ul`
     list-style: none;
     justify-content: space-between;
     width: 50%;
+    z-index: 99;
 `
 
 export const HeaderBottom = styled.div`
@@ -87,5 +103,11 @@ export const Btn = styled.button`
     bottom: 10%;
     background-color: #fe4b33;
     cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        background-color: #e10101;
+          transition: all 0.3s ease 0s;
+          animation: 5s ease 0s 1 normal fowards running fdBcwW;
+    }
 `
 
